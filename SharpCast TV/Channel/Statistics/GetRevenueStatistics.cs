@@ -143,7 +143,7 @@ namespace QuickType
         
         /*public static GetRevenueStatistics FromJson(string json)
         {
-            return JsonConvert.DeserializeObject<GetChannelStatistics>(json, QuickType.Converter.Settings);
+            return JsonConvert.DeserializeObject<GetRevenueStatistics>(json, QuickType.Converter.Settings);
         }
         
         public string ToJson()
