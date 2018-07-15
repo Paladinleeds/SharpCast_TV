@@ -73,6 +73,8 @@
     <Compile Include="GenericErrorResponse.cs" />
     <Compile Include="Channel\Stream Key\ResetStreamKeyResponse.cs" />
     <Compile Include="JsonExtensions.cs" />
+    <Compile Include="Media\Live\CreateLiveMedia.cs" />
+    <Compile Include="Media\Live\GetLiveMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\CheckVerifiedEmail.cs" />
     <Compile Include="User\DefaultTeamRequest.cs" />
