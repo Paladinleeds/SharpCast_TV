@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28A6949D-7A13-4DE0-B991-5F7F7C175483}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpCast_TV</RootNamespace>
+    <AssemblyName>SharpCast TV</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\LoginRequestP.cs" />
+    <Compile Include="Authentication\LoginRequestT.cs" />
+    <Compile Include="Authentication\LoginResponse.cs" />
+    <Compile Include="Authentication\OAuthFlow\RequestTokenRequest.cs" />
+    <Compile Include="Authentication\OAuthFlow\RequestTokenResponse.cs" />
+    <Compile Include="Authentication\Token\CheckTokenInvalid.cs" />
+    <Compile Include="Authentication\Token\CheckTokenValid.cs" />
+    <Compile Include="Authentication\Token\GetTokenRequest.cs" />
+    <Compile Include="Authentication\Token\GetTokenResponse.cs" />
+    <Compile Include="Authentication\Token\TokenGetUser.cs" />
+    <Compile Include="Channel\Commercial Breaks\GetLastCommercialBreak.cs" />
+    <Compile Include="Channel\Commercial Breaks\RunCommercialBreakRequest.cs" />
+    <Compile Include="Channel\Commercial Breaks\RunCommercialBreakResponse.cs" />
+    <Compile Include="Channel\Commercial Breaks\RunCommercialBreakUnauthorized.cs" />
+    <Compile Include="Channel\Statistics\GetChannelStatistics.cs" />
+    <Compile Include="Channel\Statistics\GetRevenueStatistics.cs" />
+    <Compile Include="Channel\Statistics\GetStreamedSecondsStatistics.cs" />
+    <Compile Include="Channel\Statistics\GetViewerStatistics.cs" />
+    <Compile Include="Channel\Stream Key\GetStreamKeyResponse.cs" />
+    <Compile Include="Channel\Stream Key\GetStreamKeyUnauthorized.cs" />
+    <Compile Include="Channel\Stream Key\ResetStreamKeyResponse.cs" />
+    <Compile Include="JsonExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\CheckVerifiedEmail.cs" />
+    <Compile Include="User\DefaultTeamRequest.cs" />
+    <Compile Include="User\DefaultTeamResponse.cs" />
+    <Compile Include="User\GetAuthenticatedUser.cs" />
+    <Compile Include="User\GetUnauthenticatedUser.cs" />
+    <Compile Include="User\OAuth\ListOAuthAccess.cs" />
+    <Compile Include="User\OAuth\ListOAuthApps.cs" />
+    <Compile Include="User\OAuth\RemoveOAuthAccessRequest.cs" />
+    <Compile Include="User\OAuth\RemoveOAuthAccessResponse.cs" />
+    <Compile Include="User\UpdateUserRequest.cs" />
+    <Compile Include="User\UpdateUserResponse.cs" />
+    <Compile Include="User\UserAccessLevels.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
