@@ -2,7 +2,7 @@
 //
 //    using QuickType;
 //
-//    var getStreamKeyUnauthorized = GetStreamKeyUnauthorized.FromJson(jsonString);
+//    var errorResponse = ErrorResponse.FromJson(jsonString);
 
 namespace QuickType
 {
@@ -13,7 +13,7 @@ namespace QuickType
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class GetStreamKeyUnauthorized
+    public partial class ErrorResponse
     {
         [JsonProperty("success")]
         public bool Success { get; set; }
@@ -25,8 +25,8 @@ namespace QuickType
         public string ErrorMsg { get; set; }
     }
 
-    public partial class GetStreamKeyUnauthorized
+    public partial class ErrorResponse
     {
-        public static GetStreamKeyUnauthorized FromJson(string json) => JsonConvert.DeserializeObject<GetStreamKeyUnauthorized>(json, QuickType.Converter.Settings);
+        public static ErrorResponse FromJson(string json) => JsonConvert.DeserializeObject<ErrorResponse>(json, QuickType.Converter.Settings);
     }
 }

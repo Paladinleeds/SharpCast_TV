@@ -141,7 +141,7 @@ namespace QuickType
         [JsonProperty("revenues")]
         public RevenuesStatistics Revenues { get; set; }
         
-        public static GetChannelStatistics FromJson(string json)
+        /*public static GetChannelStatistics FromJson(string json)
         {
             return JsonConvert.DeserializeObject<GetChannelStatistics>(json, QuickType.Converter.Settings);
         }
@@ -149,7 +149,7 @@ namespace QuickType
         public string ToJson()
         {
             return JsonConvert.SerializeObject(this, QuickType.Converter.Settings);
-        }
+        }*/
     }
 }
 /*
