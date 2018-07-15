@@ -9,11 +9,10 @@ using Newtonsoft.Json.Converters;
 namespace QuickType
 {
     // Working on fixing this. Broken API calls are currently commented out.
-    public partial class Request
+    public class RevenuesRequestInfo
     {
-
-        //[JsonProperty("this")]
-        //public string This { get; set; }
+        [JsonProperty("this")]
+        public string This { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -22,9 +21,8 @@ namespace QuickType
         public string User { get; set; }
     }
 
-    public class Summary
+    public class RevenuesSummary
     {
-
         [JsonProperty("currency")]
         public string Currency { get; set; }
 
@@ -32,21 +30,20 @@ namespace QuickType
         public string LastUpdated { get; set; }
 
         [JsonProperty("total_earnings")]
-        public int TotalEarnings { get; set; }
+        public double TotalEarnings { get; set; }
 
         [JsonProperty("max_earnings")]
-        public int MaxEarnings { get; set; }
+        public double MaxEarnings { get; set; }
 
         [JsonProperty("viewed_hours")]
-        public int ViewedHours { get; set; }
+        public double ViewedHours { get; set; }
 
         [JsonProperty("unique_user")]
         public int UniqueUser { get; set; }
     }
 
-    public class Plan
+    public class RevenuesPlan
     {
-
         [JsonProperty("plan_id")]
         public string PlanId { get; set; }
 
@@ -72,105 +69,37 @@ namespace QuickType
         public string PlanDateAdded { get; set; }
     }
 
-    /* ... is this even needed? Detecting a PEBCAK here
-    public class DailyEarnings
+    public class EarningsInfo
     {
         [JsonProperty("earnings")]
-        public int Earnings { get; set; }
-    }*/
-
-    public class DailyStatistics
-    {
-        [JsonProperty("earnings")]
-        public int Earnings { get; set; }
+        public double Earnings { get; set; }
     }
 
     public class RevenuesStatistics
     {
-        [JsonProperty("daily")]
-        public Dictionary<string, DailyStatistics> Daily { get; set; }
-
-        [JsonProperty("groups")]
-        public Dictionary<string, object> Groups { get; set; }
-
-        [JsonProperty("live")]
-        public Dictionary<string, int> Live { get; set; }
-
-        [JsonProperty("total")]
-        public Dictionary<string, int> Total { get; set; }
-
-        [JsonProperty("subs")]
-        //public int 1448928000000 { get; set; }
-        public Dictionary<string, int> Subs { get; set; }
-    }
-
-    public class Countries
-    {
-
-        [JsonProperty("United States")]
-        public int UnitedStates { get; set; }
-    }
-
-    public class Video
-    {
-
-        [JsonProperty("earnings")]
-        public int Earnings { get; set; }
-    }
-
-    public class Subscriptions
-    {
-
-        [JsonProperty("earnings")]
-        public int Earnings { get; set; }
-    }
-
-    /*public class Content
-    {
-
-        [JsonProperty("live")]
-        public Live { get; set; }
-
-        [JsonProperty("video")]
-        public Video Video { get; set; }
-
-        [JsonProperty("subscriptions")]
-        public Subscriptions Subscriptions { get; set; }
-    }
-
-    public class Top
-    {
-
-        [JsonProperty("countries")]
-        public Countries Countries { get; set; }
-
-        [JsonProperty("content")]
-        public Content Content { get; set; }
-    }
-
-    public class Revenues
-    {
-
         [JsonProperty("summary")]
-        public Summary Summary { get; set; }
+        public RevenuesSummary Summary { get; set; }
 
         [JsonProperty("plans")]
-        public IList<Plan> Plans { get; set; }
+        public IList<RevenuesPlan> Plans { get; set; }
 
         [JsonProperty("timeline")]
         public IList<IList<long>> Timeline { get; set; }
 
         [JsonProperty("daily")]
-        public Daily Daily { get; set; }
+        public Dictionary<string, EarningsInfo> Daily { get; set; }
 
         [JsonProperty("groups")]
-        public Groups Groups { get; set; }
+        public Dictionary<string, List<object>> Groups { get; set; }
 
         [JsonProperty("live")]
-        public Live Live { get; set; }
+        public Dictionary<string, double> Live { get; set; }
 
         [JsonProperty("total")]
-        public Total Total { get; set; }
+        public Dictionary<string, double> Total { get; set; }
+
+        [JsonProperty("subs")]
+        public Dictionary<string, double> Subs { get; set; }
 
         [JsonProperty("timeline_ads")]
         public IList<IList<long>> TimelineAds { get; set; }
@@ -178,22 +107,50 @@ namespace QuickType
         [JsonProperty("timeline_subs")]
         public IList<IList<long>> TimelineSubs { get; set; }
 
-        [JsonProperty("subs")]
-        public Subs Subs { get; set; }
-
         [JsonProperty("top")]
-        public Top Top { get; set; }
+        public RevenuesTopInfo Top { get; set; }
+    }
+
+    public class RevenuesTopContentInfo
+    {
+        [JsonProperty("live")]
+        public EarningsInfo Live { get; set; }
+
+        [JsonProperty("video")]
+        public EarningsInfo Video { get; set; }
+
+        [JsonProperty("subscriptions")]
+        public EarningsInfo Subscriptions { get; set; }
+    }
+
+    public class RevenuesTopInfo
+    {
+        [JsonProperty("countries")]
+        public Dictionary<string, double> Countries { get; set; }
+
+        [JsonProperty("content")]
+        public RevenuesTopContentInfo Content { get; set; }
     }
 
     public class GetRevenueStatistics
     {
 
         [JsonProperty("request")]
-        public Request Request { get; set; }
+        public RevenuesRequestInfo Request { get; set; }
 
         [JsonProperty("revenues")]
-        public Revenues Revenues { get; set; }
-    }*/
+        public RevenuesStatistics Revenues { get; set; }
+        
+        public static GetChannelStatistics FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<GetChannelStatistics>(json, QuickType.Converter.Settings);
+        }
+        
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, QuickType.Converter.Settings);
+        }
+    }
 }
 /*
  {
