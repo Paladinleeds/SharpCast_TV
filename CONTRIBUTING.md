@@ -39,11 +39,11 @@ Just a few guidelines about the code:
 * Always immediately initialise variables.
 * Always explicitly declare whether methods are public or private. If they are async, this keyword should be second (or third in case of static methods `public static async Task ...`)
 * Never return `void` with async methods unless you know what you're doing. Return `Task` instead of `void`.
-* Our current namespace is `SharpCast`
+* Our current namespace is `SharpCastTV`
 * Please see below for our writing style
 
 ```cs
-namespace SharpCast
+namespace SharpCastTV
 {
     public class TotalViews
     {
@@ -54,7 +54,7 @@ namespace SharpCast
 ```
 
 ```cs
-  namespace SharpCast
+  namespace SharpCastTV
 {
     internal static class Converter
     {
