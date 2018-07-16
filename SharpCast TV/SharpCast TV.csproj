@@ -72,6 +72,9 @@
     <Compile Include="Channel\Stream Key\GetStreamKeyResponse.cs" />
     <Compile Include="Channel\Stream Key\ResetStreamKeyResponse.cs" />
     <Compile Include="JsonExtensions.cs" />
+    <Compile Include="Media\Esports.cs" />
+    <Compile Include="Media\GetRecordings.cs" />
+    <Compile Include="Media\Live\GetGameAccounts.cs" />
     <Compile Include="Media\Live\LiveStatus.cs" />
     <Compile Include="Media\Live\CreateLiveMedia.cs" />
     <Compile Include="Media\Live\FeaturedMedia.cs" />
@@ -80,7 +83,12 @@
     <Compile Include="Media\Live\ListLiveMedia.cs" />
     <Compile Include="Media\Live\StreamDetails.cs" />
     <Compile Include="Media\Live\TotalViews.cs" />
+    <Compile Include="Media\Live\UpdateGameAccounts.cs" />
     <Compile Include="Media\Live\UpdateLiveMedia.cs" />
+    <Compile Include="Media\UserRelated.cs" />
+    <Compile Include="Media\Videos\CreateVideo.cs" />
+    <Compile Include="Media\Videos\GetVideos.cs" />
+    <Compile Include="Media\Videos\UpdateVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\CheckVerifiedEmail.cs" />
     <Compile Include="User\DefaultTeamRequest.cs" />
