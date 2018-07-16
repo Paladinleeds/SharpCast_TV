@@ -63,6 +63,11 @@
     <Compile Include="Channel\Panels\TogglePanels.cs" />
     <Compile Include="Channel\Panels\UpdateProfilePanels.cs" />
     <Compile Include="Channel\SocialPost.cs" />
+    <Compile Include="Followers\CheckFollowing.cs" />
+    <Compile Include="Followers\FollowChannel.cs" />
+    <Compile Include="Followers\FollowerStatistics.cs" />
+    <Compile Include="Followers\GetFollowedChannels.cs" />
+    <Compile Include="Followers\GetFollowers.cs" />
     <Compile Include="GenericResponses.cs" />
     <Compile Include="Channel\Editors\GetEditorsList.cs" />
     <Compile Include="Channel\Statistics\GetChannelStatistics.cs" />
@@ -90,6 +95,10 @@
     <Compile Include="Media\Videos\GetVideos.cs" />
     <Compile Include="Media\Videos\UpdateVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subscription\CheckSubscriptionInfo.cs" />
+    <Compile Include="Subscription\SubscribersList.cs" />
+    <Compile Include="Subscription\SubscriptionsList.cs" />
+    <Compile Include="Subscription\SubscriptionStatus.cs" />
     <Compile Include="User\CheckVerifiedEmail.cs" />
     <Compile Include="User\DefaultTeamRequest.cs" />
     <Compile Include="User\DefaultTeamResponse.cs" />
