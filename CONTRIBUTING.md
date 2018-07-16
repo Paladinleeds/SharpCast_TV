@@ -40,7 +40,8 @@ Just a few guidelines about the code:
 * Always explicitly declare whether methods are public or private. If they are async, this keyword should be second (or third in case of static methods `public static async Task ...`)
 * Never return `void` with async methods unless you know what you're doing. Return `Task` instead of `void`.
 * Please see below for our writing style
-  ```cs
+
+```cs
 namespace QuickType
 {
     public class TotalViews
@@ -49,8 +50,9 @@ namespace QuickType
         public string TotalLiveViews { get; set; }
     }
 }
-  ```
-  ```cs
+```
+
+```cs
   namespace QuickType
 {
     internal static class Converter
