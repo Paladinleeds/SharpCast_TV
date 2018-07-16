@@ -1,12 +1,12 @@
 ﻿// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using SharpCastTV;
 //
 //    var data = CheckVerifiedEmail.FromJson(jsonString);
 //
 // WARNING: CheckVerifiedEmail might not currently work. Attempts to fix it are underway if required. Please bear with me.
 
-namespace QuickType
+namespace SharpCastTV
 {
     using System;
     using System.Net;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace QuickType
+namespace SharpCastTV
 {
     // Working on fixing this. Broken API calls are currently commented out.
     public class RevenuesRequestInfo
@@ -143,12 +143,12 @@ namespace QuickType
         
         /*public static GetRevenueStatistics FromJson(string json)
         {
-            return JsonConvert.DeserializeObject<GetRevenueStatistics>(json, QuickType.Converter.Settings);
+            return JsonConvert.DeserializeObject<GetRevenueStatistics>(json, SharpCastTV.Converter.Settings);
         }
         
         public string ToJson()
         {
-            return JsonConvert.SerializeObject(this, QuickType.Converter.Settings);
+            return JsonConvert.SerializeObject(this, SharpCastTV.Converter.Settings);
         }*/
     }
 }

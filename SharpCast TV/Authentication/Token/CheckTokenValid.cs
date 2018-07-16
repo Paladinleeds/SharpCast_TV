@@ -1,10 +1,10 @@
 ﻿// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using SharpCastTV;
 //
 //    var checkTokenValid = CheckTokenValid.FromJson(jsonString);
 
-namespace QuickType
+namespace SharpCastTV
 {
     using System;
     using System.Collections.Generic;
@@ -27,11 +27,11 @@ namespace QuickType
 
     /*public partial class CheckTokenValid
     {
-        public static CheckTokenValid FromJson(string json) => JsonConvert.DeserializeObject<CheckTokenValid>(json, QuickType.Converter.Settings);
+        public static CheckTokenValid FromJson(string json) => JsonConvert.DeserializeObject<CheckTokenValid>(json, SharpCastTV.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this CheckTokenValid self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this CheckTokenValid self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
     }*/
 }

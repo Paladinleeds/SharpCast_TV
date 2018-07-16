@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace SharpCast_TV.Media.Live
+namespace SharpCastTV
 {
-    public class GetLiveMedia
+    public class ListLiveMedia
     {
         [JsonProperty("request")]
         public Request Request { get; set; }
@@ -17,19 +17,16 @@ namespace SharpCast_TV.Media.Live
         public string MediaType { get; set; }
 
         [JsonProperty("livestream")]
-        public IList<Livestream> Livestream { get; set; }
-
-        [JsonProperty("media_hosted_media")]
-        public IList<Livestream> Hosted_media { get; set; }
+        public IList<ListMediaLivestream> Livestream { get; set; }
     }
 
-    public class Request
+    public class ListMediaRequest
     {
         [JsonProperty("this")]
         public string This { get; set; }
     }
 
-    public class Channel
+    public class ListMediaChannel
     {
         [JsonProperty("followers")]
         public string Followers { get; set; }
@@ -64,9 +61,6 @@ namespace SharpCast_TV.Media.Live
         [JsonProperty("user_partner")]
         public string UserPartner { get; set; }
 
-        [JsonProperty("partner_type")]
-        public string PartnerType { get; set; }
-
         [JsonProperty("user_beta_profile")]
         public string UserBetaProfile { get; set; }
 
@@ -92,7 +86,7 @@ namespace SharpCast_TV.Media.Live
         public string ChannelLink { get; set; }
     }
 
-    public class Livestream
+    public class ListMediaLivestream
     {
         [JsonProperty("media_user_name")]
         public string MediaUserName { get; set; }
@@ -133,9 +127,6 @@ namespace SharpCast_TV.Media.Live
         [JsonProperty("media_countries")]
         public IList<string> MediaCountries { get; set; }
 
-        [JsonProperty("media_offline_id")]
-        public object MediaOfflineId { get; set; }
-
         [JsonProperty("media_hosted_id")]
         public object MediaHostedId { get; set; }
 
@@ -143,7 +134,7 @@ namespace SharpCast_TV.Media.Live
         public object MediaMature { get; set; }
 
         [JsonProperty("media_hidden")]
-        public string MediaHidden { get; set; }
+        public object MediaHidden { get; set; }
 
         [JsonProperty("user_banned")]
         public object UserBanned { get; set; }
@@ -160,17 +151,11 @@ namespace SharpCast_TV.Media.Live
         [JsonProperty("media_title")]
         public object MediaTitle { get; set; }
 
-        [JsonProperty("media_description")]
-        public string MediaDescription { get; set; }
-
-        [JsonProperty("media_description_md")]
-        public string MediaDescriptionMd { get; set; }
-
         [JsonProperty("media_tags")]
         public string MediaTags { get; set; }
 
         [JsonProperty("media_duration")]
-        public object MediaDuration { get; set; }
+        public string MediaDuration { get; set; }
 
         [JsonProperty("media_bg_image")]
         public string MediaBgImage { get; set; }
@@ -223,6 +208,9 @@ namespace SharpCast_TV.Media.Live
         [JsonProperty("media_start_in_sec")]
         public string MediaStartInSec { get; set; }
 
+        [JsonProperty("media_duration_format")]
+        public string MediaDurationFormat { get; set; }
+
         [JsonProperty("media_thumbnail")]
         public string MediaThumbnail { get; set; }
 
@@ -230,6 +218,6 @@ namespace SharpCast_TV.Media.Live
         public string MediaThumbnailLarge { get; set; }
 
         [JsonProperty("channel")]
-        public Channel Channel { get; set; }
+        public ListMediaChannel Channel { get; set; }
     }
 }

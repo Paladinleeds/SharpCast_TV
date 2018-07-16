@@ -4,7 +4,7 @@
 //
 //    var listOAuthAccess = ListOAuthAccess.FromJson(jsonString);
 
-namespace QuickType.User.OAuth
+namespace SharpCastTV.User.OAuth
 {
     using System;
     using System.Collections.Generic;

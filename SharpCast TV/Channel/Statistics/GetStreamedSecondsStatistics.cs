@@ -1,10 +1,10 @@
 ﻿// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using SharpCastTV;
 //
 //    var getStreamedSecondsStatistics = GetStreamedSecondsStatistics.FromJson(jsonString);
 
-namespace QuickType
+namespace SharpCastTV
 {
     using System;
     using System.Collections.Generic;
@@ -30,11 +30,11 @@ namespace QuickType
 
     /*public partial class GetStreamedSecondsStatistics
     {
-        public static GetStreamedSecondsStatistics FromJson(string json) => JsonConvert.DeserializeObject<GetStreamedSecondsStatistics>(json, QuickType.Converter.Settings);
+        public static GetStreamedSecondsStatistics FromJson(string json) => JsonConvert.DeserializeObject<GetStreamedSecondsStatistics>(json, SharpCastTV.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this GetStreamedSecondsStatistics self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this GetStreamedSecondsStatistics self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
     }*/
 }

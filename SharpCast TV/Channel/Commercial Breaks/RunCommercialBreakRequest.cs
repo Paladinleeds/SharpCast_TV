@@ -1,10 +1,10 @@
 ﻿// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using SharpCastTV;
 //
 //    var runCommercialBreakRequest = RunCommercialBreakRequest.FromJson(jsonString);
 
-namespace QuickType
+namespace SharpCastTV
 {
     using System;
     using System.Collections.Generic;
@@ -24,11 +24,11 @@ namespace QuickType
 
     /*public partial class RunCommercialBreakRequest
     {
-        public static RunCommercialBreakRequest FromJson(string json) => JsonConvert.DeserializeObject<RunCommercialBreakRequest>(json, QuickType.Converter.Settings);
+        public static RunCommercialBreakRequest FromJson(string json) => JsonConvert.DeserializeObject<RunCommercialBreakRequest>(json, SharpCastTV.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this RunCommercialBreakRequest self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this RunCommercialBreakRequest self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
     }*/
 }

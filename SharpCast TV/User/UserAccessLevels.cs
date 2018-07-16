@@ -1,12 +1,12 @@
 ﻿// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using SharpCastTV;
 //
 //    var data = UserAccessLevels.FromJson(jsonString);
 //
 // WARNING: If you have never been granted Moderator or Editor in :channel, this API will only return isSubscriber and isFollower
 
-namespace QuickType
+namespace SharpCastTV
 {
     using System;
     using System.Net;

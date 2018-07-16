@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-// Not sure if this will work - if anyone who sees the code can let me know, that'd be great!
+// WARNING: This is only to be used for the first creation of a channel. If a streamer channel already exists for the user in question, you MUST use UpdateLiveMedia
 
-namespace QuickType
+namespace SharpCastTV
 {
     // Request to Smashcast
     public class CreateLiveMediaRequest

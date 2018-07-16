@@ -1,10 +1,10 @@
 ﻿// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using SharpCastTV;
 //
 //    var loginResponse = LoginResponse.FromJson(jsonString);
 
-namespace QuickType
+namespace SharpCastTV
 {
     using System;
     using System.Collections.Generic;
@@ -69,12 +69,12 @@ namespace QuickType
 
     /*public partial class LoginResponse
     {
-        public static LoginResponse FromJson(string json) => JsonConvert.DeserializeObject<LoginResponse>(json, QuickType.Converter.Settings);
+        public static LoginResponse FromJson(string json) => JsonConvert.DeserializeObject<LoginResponse>(json, SharpCastTV.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this LoginResponse self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this LoginResponse self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
     }*/
     
     internal class ParseIntegerConverter : JsonConverter

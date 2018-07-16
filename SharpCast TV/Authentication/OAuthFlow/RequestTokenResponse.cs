@@ -1,10 +1,10 @@
 ﻿// To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using QuickType;
+//    using SharpCastTV;
 //
 //    var requestTokenResponse = RequestTokenResponse.FromJson(jsonString);
 
-namespace QuickType
+namespace SharpCastTV
 {
     using System;
     using System.Collections.Generic;
@@ -21,11 +21,11 @@ namespace QuickType
 
     /*public partial class RequestTokenResponse
     {
-        public static RequestTokenResponse FromJson(string json) => JsonConvert.DeserializeObject<RequestTokenResponse>(json, QuickType.Converter.Settings);
+        public static RequestTokenResponse FromJson(string json) => JsonConvert.DeserializeObject<RequestTokenResponse>(json, SharpCastTV.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this RequestTokenResponse self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this RequestTokenResponse self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
     }*/
 }

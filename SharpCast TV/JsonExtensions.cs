@@ -10,13 +10,13 @@ using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace QuickType
+namespace SharpCastTV
 {
     /*public static class JsonSerializer
     {
-        public static string ToJson(this ResetStreamKeyResponse self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
-        public static string ToJson(this GetStreamKeyUnauthorized self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
-        public static string ToJson(this CheckVerifiedEmail self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this ResetStreamKeyResponse self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
+        public static string ToJson(this GetStreamKeyUnauthorized self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
+        public static string ToJson(this CheckVerifiedEmail self) => JsonConvert.SerializeObject(self, SharpCastTV.Converter.Settings);
     }
 
     public static class JsonDeserializer
