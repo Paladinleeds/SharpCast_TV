@@ -26,7 +26,7 @@ Clone the SharpCast_TV repository recursively (forking will also work):
 
 ### Outside contributors:
 
-The workflow for outside contribution is recommended to be the same, we don't bite :P
+The workflow for outside contribution is almost the exact same as for internal contributors.
 
 The only difference is that you would first fork the repository, then follow all the other stuff and eventually submit a PR from your fork, into our appropriate branch.
 
