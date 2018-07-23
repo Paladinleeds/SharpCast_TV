@@ -8,7 +8,7 @@ using Newtonsoft.Json.Converters;
 
 namespace SharpCastTV
 {
-    public class SuccessResponse
+    public class SuccessResponseWithErrorCheck
     {
         [JsonProperty("success")]
         public bool Success { get; set; }
@@ -20,7 +20,16 @@ namespace SharpCastTV
         public string Message { get; set; }
 
 
-        public static SuccessResponse FromJson(string json) => JsonConvert.DeserializeObject<SuccessResponse>(json, SharpCastTV.Converter.Settings);
+        public static SuccessResponseWithErrorCheck FromJson(string json) => JsonConvert.DeserializeObject<SuccessResponseWithErrorCheck>(json, SharpCastTV.Converter.Settings);
+    }
+
+    public class SuccessResponse
+    {
+        [JsonProperty("success")]
+        public bool Success { get; set; }
+
+        [JsonProperty("success_msg")]
+        public string SuccessMsg { get; set; }
     }
 
     public class ErrorResponse

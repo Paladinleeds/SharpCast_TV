@@ -99,6 +99,12 @@
     <Compile Include="Subscription\SubscribersList.cs" />
     <Compile Include="Subscription\SubscriptionsList.cs" />
     <Compile Include="Subscription\SubscriptionStatus.cs" />
+    <Compile Include="Teams\CreateTeam.cs" />
+    <Compile Include="Teams\GetTeam.cs" />
+    <Compile Include="Teams\GetTeamsOfUser.cs" />
+    <Compile Include="Teams\ListTeams.cs" />
+    <Compile Include="Teams\RevenueStatisticsTeams.cs" />
+    <Compile Include="Teams\UpdateTeam.cs" />
     <Compile Include="User\CheckVerifiedEmail.cs" />
     <Compile Include="User\DefaultTeamRequest.cs" />
     <Compile Include="User\DefaultTeamResponse.cs" />
