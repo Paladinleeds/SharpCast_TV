@@ -63,11 +63,19 @@
     <Compile Include="Channel\Panels\TogglePanels.cs" />
     <Compile Include="Channel\Panels\UpdateProfilePanels.cs" />
     <Compile Include="Channel\SocialPost.cs" />
+    <Compile Include="Chat\Connection.cs" />
+    <Compile Include="Discord\DeleteGuildSettings.cs" />
+    <Compile Include="Discord\GetDiscordGuild.cs" />
+    <Compile Include="Discord\ListDiscordGuilds.cs" />
+    <Compile Include="Discord\UpdateGuildSettings.cs" />
     <Compile Include="Followers\CheckFollowing.cs" />
     <Compile Include="Followers\FollowChannel.cs" />
     <Compile Include="Followers\FollowerStatistics.cs" />
     <Compile Include="Followers\GetFollowedChannels.cs" />
     <Compile Include="Followers\GetFollowers.cs" />
+    <Compile Include="Games\GetGames.cs" />
+    <Compile Include="Games\ListGames.cs" />
+    <Compile Include="Games\SearchGames.cs" />
     <Compile Include="GenericResponses.cs" />
     <Compile Include="Channel\Editors\GetEditorsList.cs" />
     <Compile Include="Channel\Statistics\GetChannelStatistics.cs" />
@@ -76,6 +84,7 @@
     <Compile Include="Channel\Statistics\GetViewerStatistics.cs" />
     <Compile Include="Channel\Stream Key\GetStreamKeyResponse.cs" />
     <Compile Include="Channel\Stream Key\ResetStreamKeyResponse.cs" />
+    <Compile Include="Ingests.cs" />
     <Compile Include="JsonExtensions.cs" />
     <Compile Include="Media\Esports.cs" />
     <Compile Include="Media\GetRecordings.cs" />
@@ -117,10 +126,14 @@
     <Compile Include="User\UpdateUserRequest.cs" />
     <Compile Include="User\UpdateUserResponse.cs" />
     <Compile Include="User\UserAccessLevels.cs" />
+    <Compile Include="Webhooks\CreateWebhook.cs" />
+    <Compile Include="Webhooks\GetWebhook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Chat\Chat User\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
